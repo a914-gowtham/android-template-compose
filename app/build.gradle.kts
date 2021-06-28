@@ -2,7 +2,7 @@ plugins {
     id(Plugins.androidApplication)
     id(Plugins.kotlinAndroid)
     id(Plugins.kotlinKapt)
-//    id(Plugins.hilt)
+    id(Plugins.hilt)
 }
 
 android {
@@ -46,6 +46,14 @@ android {
         kotlinCompilerExtensionVersion = Dependencies.Compose.version
         kotlinCompilerVersion = Dependencies.Kotlin.version
     }
+
+    packagingOptions {
+        // Multiple dependency bring these files in. Exclude them to enable
+        // our test APK to build (has no effect on our AARs)
+        resources.excludes.add("/META-INF/AL2.0")
+        resources.excludes.add("/META-INF/LGPL2.1")
+        resources.excludes.add("META-INF/gradle/incremental.annotation.processors")
+    }
 }
 
 dependencies {
@@ -64,9 +72,15 @@ dependencies {
     //LifeCycle
     implementation(Dependencies.Lifecycle.runtime)
 
+    //Hilt
+    implementation(Dependencies.Hilt.hilt)
+    implementation(Dependencies.Hilt.compiler)
+
+
     //Testing
     testImplementation(Dependencies.Testing.junit)
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
 }
+
