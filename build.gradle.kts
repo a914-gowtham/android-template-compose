@@ -46,6 +46,6 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     }
 }
 
-tasks.register("clean", Delete::class) {
+tasks.named("clean", Delete::class.java) {
     delete(rootProject.buildDir)
 }
