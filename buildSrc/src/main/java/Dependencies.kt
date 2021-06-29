@@ -1,5 +1,3 @@
-import org.gradle.api.artifacts.dsl.DependencyHandler
-
 object Dependencies {
 
     const val timber = "com.jakewharton.timber:timber:4.7.1"
