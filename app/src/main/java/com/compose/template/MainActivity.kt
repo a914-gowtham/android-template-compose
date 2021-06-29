@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TAppTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
+                Surface(  color = MaterialTheme.colors.background) {
                     Greeting("Android")
                 }
             }
