@@ -76,11 +76,9 @@ dependencies {
     implementation(Dependencies.Hilt.hilt)
     implementation(Dependencies.Hilt.compiler)
 
-
     //Testing
     testImplementation(Dependencies.Testing.junit)
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
 }
-

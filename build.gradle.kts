@@ -1,9 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
+import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
-    id(Plugins.benManes) version Plugins.benManesVersion
+    id(Plugins.BenManes.benManes) version Plugins.BenManes.version
     id(Plugins.Spotless.plugin) version (Plugins.Spotless.version)
+    id(Plugins.Detekts.detekt) version Plugins.Detekts.version
 }
 
 buildscript {
@@ -46,6 +48,39 @@ configure<com.diffplug.gradle.spotless.SpotlessExtension> {
     }
 }
 
+/*./gradlew check*/
+val detektAll by tasks.registering(Detekt::class) {
+    description = "Runs over whole code base without the starting overhead for each module."
+    parallel = true
+    buildUponDefaultConfig = true
+    setSource(files(projectDir))
+    config.from(files(project.rootDir.resolve("config/detekt-config.yml")))
+    include("**/*.kt", "**/*.kts")
+    exclude("**/resources/**", "**/build/**")
+    baseline.set(project.rootDir.resolve("config/detekt-baseline.xml"))
+    reports {
+        xml.enabled = false
+        html {
+            enabled = true
+            destination = file("${rootProject.buildDir}/reports/detekt-report.html")
+        }
+        txt {
+            enabled = true
+            destination = file("${rootProject.buildDir}/reports/detekt-report.txt")
+        }
+    }
+}
+
+// Kotlin DSL
+tasks.withType<Detekt>().configureEach {
+    // Target version of the generated JVM bytecode. It is used for type resolution.
+    jvmTarget = "1.8"
+}
+
 tasks.named("clean", Delete::class.java) {
     delete(rootProject.buildDir)
+}
+
+dependencies {
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.17.1")
 }
