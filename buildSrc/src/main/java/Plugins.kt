@@ -14,7 +14,7 @@ object Plugins {
         const val version = "1.17.1"
     }
 
-    object BenManes {
+    object BenManes {formatt
         const val plugin = "com.github.ben-manes.versions"
         const val version = "0.39.0"
     }
