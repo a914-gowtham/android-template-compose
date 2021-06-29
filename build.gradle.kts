@@ -3,7 +3,7 @@ import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import io.gitlab.arturbosch.detekt.Detekt
 
 plugins {
-    id(Plugins.BenManes.benManes) version Plugins.BenManes.version
+    id(Plugins.BenManes.plugin) version Plugins.BenManes.version
     id(Plugins.Spotless.plugin) version (Plugins.Spotless.version)
     id(Plugins.Detekts.detekt) version Plugins.Detekts.version
 }

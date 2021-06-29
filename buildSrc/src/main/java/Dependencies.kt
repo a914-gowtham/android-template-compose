@@ -4,7 +4,7 @@ object Dependencies {
 
     object OkHttp {
         const val bom = "com.squareup.okhttp3:okhttp-bom:4.9.0"
-        const val okhttp = "com.squareup.okhttp3:okhttp"
+        const val dependency = "com.squareup.okhttp3:okhttp"
         const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor"
         const val retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
         const val converter = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0"
@@ -13,7 +13,7 @@ object Dependencies {
     object Kotlin {
         const val version = "1.5.10"
         private const val coroutinesVersion = "1.5.0"
-        const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:$version"
+        const val stbLib = "org.jetbrains.kotlin:kotlin-stdlib:$version"
         const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
         const val serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
@@ -66,7 +66,7 @@ object Dependencies {
     object Hilt {
         const val version = "2.37"
         const val plugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
-        const val hilt = "com.google.dagger:hilt-android:$version"
+        const val dependency = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-compiler:$version"
     }
 

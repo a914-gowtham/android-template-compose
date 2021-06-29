@@ -15,7 +15,7 @@ object Plugins {
     }
 
     object BenManes {
-        const val benManes = "com.github.ben-manes.versions"
+        const val plugin = "com.github.ben-manes.versions"
         const val version = "0.39.0"
     }
 }

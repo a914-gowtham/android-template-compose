@@ -58,25 +58,25 @@ android {
 
 dependencies {
 
-    //Android
+    /*android*/
     implementation(Dependencies.Android.ktx)
     implementation(Dependencies.Android.appCompat)
     implementation(Dependencies.Android.material)
 
-    //Compose
+    /*compose*/
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.material)
     implementation(Dependencies.Compose.tooling)
     implementation(Dependencies.Compose.activity)
 
-    //LifeCycle
+    /*lifecycle*/
     implementation(Dependencies.Lifecycle.runtime)
 
-    //Hilt
-    implementation(Dependencies.Hilt.hilt)
+    /*hilt*/
+    implementation(Dependencies.Hilt.dependency)
     implementation(Dependencies.Hilt.compiler)
 
-    //Testing
+    /*Testing*/
     testImplementation(Dependencies.Testing.junit)
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
