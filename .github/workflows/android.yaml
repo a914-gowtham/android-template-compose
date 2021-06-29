@@ -6,17 +6,16 @@ on:
       - main
 
 jobs:
-  android:
+  build:
     runs-on: macos-latest
-    timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up JDK 1.11
+      - uses: actions/checkout@v1
+      - name: set up JDK 11
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Build Project
-        run: bash ./gradlew build
+      - name: Build android app
+        run: ./gradlew assembleDebug
 
   spotless-check:
     runs-on: macos-latest
