@@ -20,9 +20,9 @@ object Dependencies {
     }
 
     object Android {
-        const val ktx = "androidx.core:core-ktx:1.5.0"
+        const val ktx = "androidx.core:core-ktx:1.6.0"
         const val appCompat = "androidx.appcompat:appcompat:1.3.0"
-        const val material = "com.google.android.material:material:1.3.0"
+        const val material = "com.google.android.material:material:1.4.0"
         const val prefs = "androidx.preference:preference-ktx:1.1.1"
     }
 
@@ -38,7 +38,7 @@ object Dependencies {
     }
 
     object Compose {
-        const val version = "1.0.0-beta09"
+        const val version = "1.0.0-rc01"
         const val ui = "androidx.compose.ui:ui:$version"
         const val material = "androidx.compose.material:material:$version"
         const val tooling = "androidx.compose.ui:ui-tooling:$version"
@@ -72,8 +72,8 @@ object Dependencies {
 
     object Testing {
         const val junit = "junit:junit:4.13.2"
-        const val junitAndroid = "androidx.test.ext:junit:1.1.2"
-        const val espresso = "androidx.test.espresso:espresso-core:3.3.0"
+        const val junitAndroid = "androidx.test.ext:junit:1.1.3"
+        const val espresso = "androidx.test.espresso:espresso-core:3.4.0"
         const val junitCompose = "androidx.compose.ui:ui-test-junit4:1.0.0-alpha07"
     }
 }

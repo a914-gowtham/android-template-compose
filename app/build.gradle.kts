@@ -37,14 +37,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
-        useIR = true
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = Dependencies.Compose.version
-        kotlinCompilerVersion = Dependencies.Kotlin.version
     }
 
     packagingOptions {
@@ -58,25 +56,25 @@ android {
 
 dependencies {
 
-    /*android*/
+    // android
     implementation(Dependencies.Android.ktx)
     implementation(Dependencies.Android.appCompat)
     implementation(Dependencies.Android.material)
 
-    /*compose*/
+    // compose
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.material)
     implementation(Dependencies.Compose.tooling)
     implementation(Dependencies.Compose.activity)
 
-    /*lifecycle*/
+    // lifecycle
     implementation(Dependencies.Lifecycle.runtime)
 
-    /*hilt*/
+    // hilt
     implementation(Dependencies.Hilt.dependency)
     implementation(Dependencies.Hilt.compiler)
 
-    /*Testing*/
+    // testing
     testImplementation(Dependencies.Testing.junit)
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
