@@ -38,7 +38,7 @@ object Dependencies {
     }
 
     object Compose {
-        const val version = "1.0.0-rc01"
+        const val version = "1.0.0"
         const val ui = "androidx.compose.ui:ui:$version"
         const val material = "androidx.compose.material:material:$version"
         const val tooling = "androidx.compose.ui:ui-tooling:$version"
@@ -64,7 +64,7 @@ object Dependencies {
     }
 
     object Hilt {
-        const val version = "2.37"
+        const val version = "2.38.1"
         const val plugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
         const val dependency = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-compiler:$version"
