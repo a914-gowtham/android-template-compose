@@ -60,6 +60,8 @@ dependencies {
     implementation(Dependencies.Android.ktx)
     implementation(Dependencies.Android.appCompat)
     implementation(Dependencies.Android.material)
+    implementation(Dependencies.Android.crypto)
+    implementation(Dependencies.Android.splashScreen)
 
     // compose
     implementation(Dependencies.Compose.ui)
