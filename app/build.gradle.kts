@@ -78,7 +78,24 @@ dependencies {
 
     // testing
     testImplementation(Dependencies.Testing.junit)
+
+
+
     androidTestImplementation(Dependencies.Testing.junitAndroid)
     androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
+
+    // Local Unit Tests
+    implementation("androidx.test:core:1.3.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
+    testImplementation("com.google.truth:truth:1.0.1")
+
+    // Instrumented Unit Tests
+    androidTestImplementation("junit:junit:4.13.2")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
+    androidTestImplementation("com.google.truth:truth:1.0.1")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    androidTestImplementation("org.mockito:mockito-core:2.28.2")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.37")
+    kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
 }

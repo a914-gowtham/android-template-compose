@@ -76,6 +76,13 @@ object Dependencies {
         const val compiler = "com.google.dagger:hilt-compiler:$version"
     }
 
+    object Room {
+        const val version = "2.4.0-alpha02"
+        const val roomRunTime = "androidx.room:room-runtime:$version" //Room
+        const val roomExt = "androidx.room:room-ktx:$version"  //Room
+        const val roomKapt = "androidx.room:room-compiler:$version" //Room
+    }
+
     object Testing {
         const val junit = "junit:junit:4.13.2"
         const val junitAndroid = "androidx.test.ext:junit:1.1.3"
