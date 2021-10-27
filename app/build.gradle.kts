@@ -74,28 +74,33 @@ dependencies {
 
     // hilt
     implementation(Dependencies.Hilt.dependency)
-    implementation(Dependencies.Hilt.compiler)
+    kapt(Dependencies.Hilt.compiler)
 
-    // testing
-    testImplementation(Dependencies.Testing.junit)
-
-
-
-    androidTestImplementation(Dependencies.Testing.junitAndroid)
-    androidTestImplementation(Dependencies.Testing.espresso)
     androidTestImplementation(Dependencies.Testing.junitCompose)
 
-    // Local Unit Tests
-    implementation("androidx.test:core:1.3.0")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
-    testImplementation("com.google.truth:truth:1.0.1")
+    // Local unit tests
+    testImplementation("androidx.test:core:1.4.0")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.1")
+    testImplementation("com.google.truth:truth:1.1.3")
+    testImplementation("com.squareup.okhttp3:mockwebserver:4.9.1")
+    testImplementation("io.mockk:mockk:1.10.5")
+    testImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    testImplementation("com.google.dagger:hilt-android-compiler:2.38.1")
 
     // Instrumented Unit Tests
     androidTestImplementation("junit:junit:4.13.2")
     androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1")
+    androidTestImplementation("androidx.arch.core:core-testing:2.1.0")
     androidTestImplementation("com.google.truth:truth:1.0.1")
+    androidTestImplementation("androidx.test.ext:junit:1.1.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
     androidTestImplementation("org.mockito:mockito-core:2.28.2")
-    androidTestImplementation("com.google.dagger:hilt-android-testing:2.37")
+    androidTestImplementation("com.google.dagger:hilt-android-testing:2.38.1")
+    androidTestImplementation("com.android.support.test:runner:1.3.0-beta01")
+    androidTestImplementation("org.robolectric:robolectric:4.4")
+//    androidTestImplementation("io.mockk:mockk-android:1.10.5")
+//    androidTestImplementation("androidx.test:runner:1.4.0")
     kaptAndroidTest("com.google.dagger:hilt-android-compiler:2.38.1")
 }
