@@ -9,6 +9,7 @@ android {
     compileSdk = Config.compileSdkVersion
     buildToolsVersion = Config.buildToolsVersion
 
+    namespace = Config.applicationId
     defaultConfig {
         applicationId = Config.applicationId
         minSdk = Config.minSdkVersion
@@ -32,17 +33,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = Dependencies.Compose.version
+        kotlinCompilerExtensionVersion = "1.4.7"
     }
 
     packagingOptions {
@@ -64,10 +65,15 @@ dependencies {
     implementation(Dependencies.Android.splashScreen)
 
     // compose
+    val composeBom = platform(Dependencies.Compose.composeBom)
+
+    implementation(composeBom)
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.material)
     implementation(Dependencies.Compose.tooling)
+    debugImplementation("androidx.compose.ui:ui-tooling")
     implementation(Dependencies.Compose.activity)
+    implementation("androidx.compose.animation:animation:1.4.3")
 
     // lifecycle
     implementation(Dependencies.Lifecycle.runtime)

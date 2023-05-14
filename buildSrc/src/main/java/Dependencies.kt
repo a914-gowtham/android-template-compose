@@ -11,8 +11,8 @@ object Dependencies {
     }
 
     object Kotlin {
-        const val version = "1.5.21"
-        private const val coroutinesVersion = "1.5.0"
+        const val version = "1.8.21"
+        private const val coroutinesVersion = "1.7.1"
         const val stbLib = "org.jetbrains.kotlin:kotlin-stdlib:$version"
         const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
         const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
@@ -30,7 +30,7 @@ object Dependencies {
     }
 
     object DataStore {
-        private const val version = "1.0.0-beta02"
+        private const val version = "1.0.0"
         const val typed = "androidx.datastore:datastore:$version"
         const val preferences = "androidx.datastore:datastore-preferences:$version"
     }
@@ -42,18 +42,21 @@ object Dependencies {
 
     object Compose {
         const val version = "1.0.1"
-        const val ui = "androidx.compose.ui:ui:$version"
-        const val material = "androidx.compose.material:material:$version"
-        const val tooling = "androidx.compose.ui:ui-tooling:$version"
-        const val activity = "androidx.activity:activity-compose:1.3.0-beta02"
-        const val lifecycle = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha04"
-        const val livedata = "androidx.compose.runtime:runtime-livedata:$version"
-        const val iconsExtended = "androidx.compose.material:material-icons-extended:$version"
+        const val composeBom = "androidx.compose:compose-bom:2023.05.01"
+        const val ui = "androidx.compose.ui:ui"
+        const val material = "androidx.compose.material:material"
+        const val material3 = "androidx.compose.material3:material3"
+
+        const val tooling = "androidx.compose.ui:ui-tooling-preview"
+        const val activity = "androidx.activity:activity-compose:1.6.1"
+        const val lifecycle = "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1"
+        const val livedata = "androidx.compose.runtime:runtime-livedata"
+        const val iconsExtended = "androidx.compose.material:material-icons-extended"
         const val paging = "androidx.paging:paging-compose:1.0.0-alpha11"
     }
 
     object Accompanist {
-        private const val version = "0.16.0"
+        private const val version = "0.30.1"
         const val coil = "com.google.accompanist:accompanist-coil:0.15.0"
         const val animation = "com.google.accompanist:accompanist-navigation-animation:$version"
         const val windowInsets = "com.google.accompanist:accompanist-insets:$version"
@@ -65,19 +68,19 @@ object Dependencies {
     }
 
     object Navigation {
-        const val compose = "androidx.navigation:navigation-compose:2.4.0-alpha01"
-        const val hilt = "androidx.hilt:hilt-navigation-compose:1.0.0-alpha02"
+        const val compose = "androidx.navigation:navigation-compose:2.5.3"
+        const val hilt = "androidx.hilt:hilt-navigation-compose:1.0.0"
     }
 
     object Hilt {
-        const val version = "2.38.1"
+        const val version = "2.46"
         const val plugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
         const val dependency = "com.google.dagger:hilt-android:$version"
         const val compiler = "com.google.dagger:hilt-compiler:$version"
     }
 
     object Room {
-        const val version = "2.4.0-alpha02"
+        const val version = "2.5.1"
         const val roomRunTime = "androidx.room:room-runtime:$version" //Room
         const val roomExt = "androidx.room:room-ktx:$version"  //Room
         const val roomKapt = "androidx.room:room-compiler:$version" //Room
